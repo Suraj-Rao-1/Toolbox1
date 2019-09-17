@@ -24,48 +24,91 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
-            android:text="Red" />
+            android:text="@string/radioButton1" />
 
         <RadioButton
             android:id="@+id/BlueButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
-            android:text="Blue" />
+            android:text="@string/radioButton2" />
 
         <RadioButton
             android:id="@+id/GreenButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
-            android:text="Green" />
+            android:text="@string/radioButton3" />
     </RadioGroup>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
-
     <CheckBox
-        android:id="@+id/time"
+        android:id="@+id/time1"
         android:layout_width="101dp"
         android:layout_height="28dp"
         android:layout_marginTop="160dp"
         android:layout_marginEnd="208dp"
-        android:text="CheckBox"
+        android:onClick="onCheckBoxClicked"
+        android:text="@string/checkbox1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/date"
+        android:id="@+id/date1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="208dp"
-        android:layout_marginEnd="216dp"
-        android:text="CheckBox"
+        android:layout_marginTop="212dp"
+        android:layout_marginEnd="248dp"
+        android:onClick="onCheckBoxClicked"
+        android:text="@string/checkbox2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="92dp"
+        android:text="@string/cTextView1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/cTextView2"
+        app:layout_constraintStart_toStartOf="@+id/cTextView1"
+        app:layout_constraintTop_toBottomOf="@+id/cTextView1" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="416dp"
+        android:text="@string/switch1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="147dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="144dp"
+        android:text="@string/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/rBTitle"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -26,23 +25,25 @@ public class MainActivity extends AppCompatActivity {
 
         boolean checked = ((CheckBox) view).isChecked();
 
-        CheckBox time = findViewById(R.id.time);
-        CheckBox date = findViewById(R.id.date);
-        //TextView checkbox = findViewById(R.id.checkBoxView1);
-        //TextView checkbox1 = findViewById(R.id.checkBoxView2);
 
+        TextView checkbox = findViewById(R.id.cTextView1);
+        TextView checkbox1 = findViewById(R.id.cTextView2);
 
-        /*if(time.isChecked()){
-
-            checkbox.setText();
-        }
-        if(date.isChecked()){
-            checkbox.setText();
-        }
 
         switch(view.getId()){
-            case
-        }*/
+            case R.id.time1:
+                if(checked)
+                    checkbox.setText("Hello");
+                else
+                    checkbox.setText("");
+                    break;
+            case R.id.date1:
+                if(checked)
+                    checkbox1.setText("Hi");
+                else
+                    checkbox1.setText("");
+                    break;
+        }
 
     }
 

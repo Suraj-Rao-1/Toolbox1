@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">Assignment0915</string>
+    <string name="app_name">ToolboxNew</string>
+    <string name="title">Discover the Buttons!</string>
+    <string name="checkbox1">Time</string>
+    <string name="checkbox2">Date</string>
+    <string name="cTextView1">Later</string>
+    <string name="cTextView2">Later</string>
+    <string name="switch1">Change Font!</string>
+    <string name="rBTitle">Change Background Color</string>
+    <string name="radioButton1">Red</string>
+    <string name="radioButton2">Blue</string>
+    <string name="radioButton3">Green</string>
 </resources>
