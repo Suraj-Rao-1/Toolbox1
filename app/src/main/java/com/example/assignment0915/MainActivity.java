@@ -2,23 +2,71 @@ package com.example.assignment0915;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.res.ResourcesCompat;
 
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final ImageView image = (ImageView) findViewById(R.id.image);
+
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.seasons, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String season1 = adapterView.getItemAtPosition(i).toString();
+                if(season1.equals("Spring"))
+                    image.setImageResource(R.drawable.spring);
+                if(season1.equals("Summer"))
+                    image.setImageResource(R.drawable.summer);
+                if(season1.equals("Autumn"))
+                    image.setImageResource(R.drawable.autumn);
+                if(season1.equals("Winter"))
+                    image.setImageResource(R.drawable.winter);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                image.setImageResource(R.drawable.winter);
+            }
+        });
+
+        ImageButton myImageButton;
+
+        myImageButton = (ImageButton) findViewById(R.id.imageButton);
+
+        myImageButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent intentLoadNewActivity = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intentLoadNewActivity);
+            }
+        });
     }
 
     public void onCheckBoxClicked(View view){
@@ -99,5 +147,22 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
+
+    public void onSwitchClick(View view){
+        boolean checked = ((Switch) view).isChecked();
+
+        GradientDrawable gd = new GradientDrawable();
+        gd.setColor(0xFF00FF00); // Changes this drawbale to use a single color instead of a gradient
+        gd.setCornerRadius(5);
+        gd.setStroke(1, 0xFF000000);
+        TextView tv = (TextView)findViewById(R.id.date1);
+
+       if(checked)
+           tv.setBackground(gd);
+        else
+            tv.setBackgroundColor(Color.TRANSPARENT);
+    }
+
+
 
 }

@@ -5,9 +5,15 @@
     <string name="checkbox2">Date</string>
     <string name="cTextView1">Later</string>
     <string name="cTextView2">Later</string>
-    <string name="switch1">Change Font!</string>
+    <string name="switch1">Change Background Color!</string>
     <string name="rBTitle">Change Background Color</string>
     <string name="radioButton1">Red</string>
     <string name="radioButton2">Blue</string>
     <string name="radioButton3">Green</string>
+    <string-array name="seasons">
+        <item>Winter</item>
+        <item>Spring</item>
+        <item>Summer</item>
+        <item>Autumn</item>
+    </string-array>
 </resources>

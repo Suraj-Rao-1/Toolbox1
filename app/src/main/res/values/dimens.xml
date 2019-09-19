@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="checkBoxWidth">75dp</dimen>
+    <dimen name="checkBoxHeight">35dp</dimen>
+    <dimen name="checkBoxLeftMargin">60dp</dimen>
+    <dimen name="cTextViewRightMargin">100dp</dimen>
+    <dimen name="timeTopMargin">55dp</dimen>
+    <dimen name="dateTopMargin">20dp</dimen>
+    <dimen name="cbcoTop">175dp</dimen>
+    <dimen name="cbcoLeft">70dp</dimen>
+    <dimen name="rGTop">30dp</dimen>
+    <dimen name="rGSide"></dimen>
+    <dimen name="cbcnTop">350dp</dimen>
+    <dimen name="cbcnSide">50dp</dimen>
+    <dimen name="spinnerBottom">355dp</dimen>
+    <dimen name="spinnerRight">50dp</dimen>
+    <dimen name="spiralTop">200dp</dimen>
+    <dimen name="spiralRight">30dp</dimen>
+    <dimen name="picBottom">15dp</dimen>
+    <dimen name="picRight">15dp</dimen>
+</resources>
